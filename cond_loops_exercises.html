@@ -16,7 +16,7 @@ console.log(lessThanFour('asdfasdfrrasdf'))
 
 // exercise 2
 
-let temperature = temp => {
+let tempColor = temp => {
 
 switch (true) {
     case (temp >= 100):
@@ -41,10 +41,24 @@ switch (true) {
         console.log("That's out of range");
     }
 }
-console.log(temperature(101))
+console.log(tempColor(101))
 
 
+// exercise 3
 
+const items = ['cat','dog','bird','dragon','flamingo']
+
+const makeCopies = (myArr) =>{
+    let outArray = []
+    for(let i =0; i< myArr.length; i++){
+        outArray[i] = []
+
+        for(let j = 0; j<100; j++)
+            outArray[i].push(myArr[i])
+    }
+    return outArray
+}
+console.log(makeCopies(items))
 
 
 </script>
