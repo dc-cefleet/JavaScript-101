@@ -16,34 +16,32 @@ console.log(lessThanFour('asdfasdfrrasdf'))
 
 // exercise 2
 
-const tempColor = temp => {
+const temperature = temp => {
 
 switch (true) {
     case (temp >= 100):
-        console.log("It's Hot!");
+        console.log('%c It\'s Hot! ', 'color: #FF0000');
         break;
     case (temp >= 85 && temp < 100):
-        console.log("It's nice out!");
+        console.log('%c It\'s Nice out!', 'color: #FFA500');
         break;
     case (temp >= 75 && temp < 85):
-        console.log("It's a little chilly!");
+        console.log('%c It\'s a little chilly', 'color: #FFFF00');
         break;
     case (temp >= 65 && temp < 75):
-        console.log("It's getting cold!");
+        console.log('%c It\'s getting cold ', 'color: #008000');
         break;
     case (temp >= 55 && temp < 65):
-        console.log("It's cold!");
+        console.log('%c It\'s Cold! ', 'color: #800080');
         break;
     case (temp >= 0 && temp < 55):
-        console.log("It's REALLY cold!");
+        console.log('%c It\'s REALLY cold!', 'color: #DB7093');
         break;
     default:
         console.log("That's out of range");
     }
 }
-console.log(tempColor(84))
-
-
+console.log(temperature(86))
 
 
 
