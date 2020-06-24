@@ -61,6 +61,36 @@
 
             console.log(aNodeList2)
             console.log(aHTMLCollection2)
+            console.log(item2)
+
+            //creating new element
+
+            const createCard = (title, content, extra) =>{
+                let newSection = document.createElement("section")
+                let newH2 = document.createElement("h2")
+                newH2.innerText = title
+
+                let newP = document.createElement('p')
+                newP.append(content)
+
+                let newP2 = document.createElement('p')
+                newP2.append(extra)
+
+                newSection.append(newH2, newP, newP2)
+                console.log(newSection)
+                
+                newP2.setAttribute("class", "extra")
+
+                let docBody = document.getElementById('mainContent')
+                docBody.append(newSection)
+
+            }
+
+            createCard("Wow", "Clint really likes Stars Wars", "But does he really?!")
+            createCard("Sometimes I wonder about...", "Things like why is the sky blue", "why?!..")
+
+
+
 
 
         </script>
