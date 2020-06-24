@@ -37,6 +37,31 @@
             console.log(document.getElementsByTagName("p"))
             console.log(document.getElementsByClassName("extra"))
             console.log(document.getElementById("first-name"))
+            console.log(document.querySelector(".extra"))
+            console.log(document.querySelectorAll(".extra"))
+
+            let aHTMLCollection = document.getElementsByClassName("extra")
+            let aExtraItem = aHTMLCollection[0];
+            aExtraItem.style = "background:blue; font-weight:bold"
+
+            //set Attribute is a function
+            aExtraItem.setAttribute("style", "border:4px solid blue;")
+            console.log(aExtraItem.innerHTML)
+            aExtraItem.innerHTML = "<h3> I have taken over the world</h3>"
+            console.dir(aExtraItem)
+            console.dir(aExtraItem.firstChild)
+
+            //more things
+            let aNodeList2 = document.querySelectorAll(".extra")
+
+            let aHTMLCollection2 = document.getElementsByClassName("extra")
+            let item2 = aNodeList2[0]
+
+            item2.parentNode.removeChild(item2)
+
+            console.log(aNodeList2)
+            console.log(aHTMLCollection2)
+
 
         </script>
     </body>
