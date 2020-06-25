@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
     <body>
         <div id="root">
@@ -7,22 +10,84 @@
         </div> 
         <script>
             let header = document.createElement('h1')
-            header.append('About Carrie')
-            root.append(header)
+            header.classList.add("header1")
+            header.append('My Page')
+            document.body.append(header)
+
 
             let navBar = document.createElement('nav')
-            root.append(navBar)
+            navBar.classList.add("navbar")
+            document.body.append(navBar)
 
             let nav = document.createElement("ul")
+            nav.classList.add("nav")
             navBar.append(nav)
+            
 
             let newListItem = document.createElement('li')
             newListItem.innerText = "Home"
             nav.append(newListItem)
+            // newListItem.classList.add("nav item")
 
             let newListItem2 = document.createElement('li')
             newListItem2.innerText = "About Me"
             nav.append(newListItem2)
+            // newListItem2.classList.add("nav item2")
+            
+            var img = document.createElement("IMG");
+            img.setAttribute("src", "kitties.jpg");
+            img.classList.add("img")
+            document.body.append(img)
+
+            let header2 = document.createElement('h2')
+            header2.classList.add("header")
+            header2.append('About me')
+            document.body.append(header2)
+
+            let paragraph = document.createElement('p')
+            paragraph.innerText = "Hi! My name is Carrie Grossman and this page is about me. I love learning about programming. I also have two awesome cats. :)"
+            document.body.append(paragraph)
+            paragraph.classList.add("paragraph")
+
+
+            let header3 = document.createElement('h3')
+            header3.classList.add("header")
+            header3.append('My Likes')
+            document.body.append(header3)
+
+            let likes = document.createElement("ul")
+            nav.classList.add("likes")
+            document.body.append(likes)
+
+            const like = (item) => {
+                let like = document.createElement("li")
+                like.innerText = item
+                likes.appendChild(like)
+            }
+
+            like("Solving Puzzles")
+            like("My cats.. of course")
+            like("Watching Movies")
+
+            let header4 = document.createElement('h3')
+            header4.classList.add("header")
+            header4.append('My Dislikes')
+            document.body.append(header4)
+
+            let dislikes = document.createElement("ul")
+            nav.classList.add("dislikes")
+            document.body.append(dislikes)
+
+            const dislike = (item) => {
+                let dislike = document.createElement("li")
+                dislike.innerText = item
+                dislikes.appendChild(dislike)
+            }
+
+            dislike("Snakes..so creepy")
+            dislike("Negativity")
+            dislike("Speaking in front of people")
+            
 
 
             
